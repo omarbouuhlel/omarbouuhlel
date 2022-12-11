@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Carnet de notes</h1>
+    <label id="cnt" for="nom">Nom eleve:</label>
+    <input type="text" id="nom" required /> <br />
+    <br />
+    <label id="cnt" for="moy">Moyenne generale:</label>
+    <input type="text" name="" id="moy" required /> <br />
+    <button id="add" onclick="ajouter()">Ajouter</button>
+    <button id="cancel" onclick="supprimer()">Supprimer</button>
+    <button id="view" onclick="moyy()">Consulter le moyenne</button> <br />
+    <br />
+    <select size="3" id="liste"></select>
+
+    <script>
+      let moyennes = new Array();
+      function ajouter() {
+        let a = document.getElementById("nom").value;
+        let b = document.getElementById("moy").value;
+        if (a == "") {
+          alert("saisir nom svp");
+        } else if (b == "") {
+          alert("saisir moyenne svp");
+        } else {
+          document.getElementById("liste").innerHTML +=
+            "<option id=" + a + ">" + a + "</option>";
+          moyennes.push(b);
+        }
+      }
+
+      function supprimer() {
+        let a = document.getElementById("liste").selectedIndex;
+        document.getElementById("liste").options[a] = null;
+      }
+
+      function moyy() {
+        let a = document.getElementById("liste").selectedIndex;
+        alert(moyennes[a]);
+      }
+    </script>
+  </body>
+</html>

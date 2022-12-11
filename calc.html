@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Calculatrice</h1>
+    <p>entrer dexh valeurs</p>
+    <br />
+    <br />
+    <label for="v1">Valeur 1</label>
+    <input type="number" id="v1" required /> <br />
+    <br />
+    <label for="v2">Valeur 2</label>
+    <input type="number" id="v2" required /> <br />
+    <br />
+
+    <p>Operateurs :</p>
+    <br />
+    <input type="radio" name="calcul" id="addition" />
+    <label for="addition">Addition</label> <br />
+    <input type="radio" name="calcul" id="soustraction" />
+    <label for="soustraction" id="cc">Soustracion</label><br />
+    <input type="radio" name="calcul" id="multiplication" />
+    <label for="multiplication" id="cc">Multiplication</label><br />
+    <input type="radio" name="calcul" id="division" />
+    <label for="division">Division</label> <br />
+    <input type="submit" onclick="operation()" value="calculer" />
+    <input type="reset" value="effacer" /> <br />
+
+    <a href="application.html">retour</a>
+    <script>
+      function operation() {
+        let a = Number(document.getElementById("v1").value);
+        let b = Number(document.getElementById("v2").value);
+        if (document.getElementById("addition").checked) {
+          alert(a + b);
+        } else if (document.getElementById("soustraction").checked) {
+          alert(a - b);
+        } else if (document.getElementById("multiplication").checked) {
+          alert(a * b);
+        } else if (document.getElementById("division").checked) {
+          alert(a / b);
+        }
+      }
+    </script>
+  </body>
+</html>

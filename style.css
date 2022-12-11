@@ -1,0 +1,44 @@
+h1 {
+  color: cadetblue;
+}
+body {
+  background-color: bisque;
+  color: cadetblue;
+}
+#l1 {
+  text-align: center;
+  font-size: 50px;
+  color: red;
+}
+#cnt {
+  float: left;
+  width: 125px;
+}
+#liste {
+  border: solid 1px;
+}
+select {
+  width: 150px;
+  height: 100px;
+  overflow-y: hidden;
+}
+button {
+  margin: 10px;
+}
+#view {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#add {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#cancel {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#lbl {
+  display: inline-block;
+  width: 70px;
+  text-align: left;
+}

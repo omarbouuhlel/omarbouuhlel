@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 align="center">Categories</h1>
+    <h2>Mention eleve</h2>
+    <h3>Entrer moyenne:</h3>
+    <label for="moy">Moyenne</label>
+    <input type="number" id="moy" />
+    <button onclick="moyenne()">Mention eleve</button> <br />
+    <h1 id="mention"></h1>
+    <script>
+      function moyenne() {
+        let a = Number(document.getElementById("moy").value);
+        if (a >= 10 && a < 12) {
+          document.getElementById("mention").innerHTML = "passable";
+        } else if (a >= 12 && a < 14) {
+          document.getElementById("mention").innerHTML = "moyen";
+        } else if (a >= 14 && a < 16) {
+          document.getElementById("mention").innerHTML = "bien";
+        } else if (a >= 16 && a < 18) {
+          document.getElementById("mention").innerHTML = "tres bien";
+        } else if (a >= 18 && a < 20) {
+          document.getElementById("mention").innerHTML = "excellent";
+        }
+      }
+    </script>
+  </body>
+</html>
